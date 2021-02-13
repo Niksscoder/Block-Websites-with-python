@@ -20,7 +20,7 @@ def block_sites():
 
     else:
         print("unblock sites")
-        with open(hosts_path, 'r') as hostsfile:
+        with open(hosts_path, 'r+') as hostsfile:
             lines = hostsfile.readline()
             hostsfile.seek(0)
             for line in lines:
